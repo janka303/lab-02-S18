@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Chat</title>
+
+  <!-- link our style sheet to our html file -->
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+</head>
+<body>
+
+
+<!--
+	Username input. 
+	Submitting name executes setClientName function,
+	emitting the 'setClientName' message to the server over sockets.
+-->
+
+
+<div id = "chooseName" style="margin:20px;">
+
+<form action="javascript:setClientName();"  id="alias">
+	<img src="/assets/spotify.png" style="width:50px; height:50px;" align="right">
+	<style>
+		body {
+
+		color: #45CE6C; 
+		}
+	</style>
+	<h4> Spotify Chat </h4>
+	<h4> Please choose your username.</h4>
+	<br>
+	<center>Username: 
+
+	<input type="text" name="Nickname" value="Your Name">
+	<br>
+	<input type="submit" value="Submit"></center>
+</form>
+ </div>
+
+
+<!-- Chatroom          -->
+
+<div id="chatroom" >
+			
+	<div style="padding:10px; height: 400px; overflow-y: scroll" id=chatbox>You have entered the chatroom</div>
+
+	<img src="/assets/spotify.png" style="width:50px; height:50px;" align="right">
+	
+	<div style=" width:100%; position:absolute; bottom:0;"> 
+
+		<form action="javascript:clientMessage();" id="inputMessage">
+			<input style="
+				margin: 10px;
+                bottom: 0; 
+                width: 90%; 
+                font-size: 17px;
+                font-family:Times New Roman, Times, serif;
+                padding:10px;" type="text" name="messageContent" value="Start typing..." >
+           	<input type="submit" value="Submit">
+
+		</form>
+	</div>
+</div>
+
+
+
+<!-- Username input                -->
+
+
+
+<script src = "/socket.io/socket.io.js"></script>
+<script src = "/main.js"></script>
+
+
+
+</body>
+</html>
