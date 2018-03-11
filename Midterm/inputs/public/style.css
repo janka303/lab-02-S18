@@ -1,0 +1,17 @@
+input {
+    display: inline;
+}
+
+
+
+#chatroom {
+	
+	height: 500px;
+	display: none; 	
+	background-image: url("/assets/template.png");
+	margin: 70px;
+	position: relative;"
+
+
+}
+

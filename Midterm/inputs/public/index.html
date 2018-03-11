@@ -1,0 +1,135 @@
+
+<!-- Chatroom          -->
+<!-- 
+<div id="chatroom" >
+			
+	<div style="padding:10px; height: 400px; overflow-y: scroll" id=chatbox>You have entered the chatroom</div>
+
+	<img src="/assets/spotify.png" style="width:50px; height:50px;" align="right">
+	
+	<div style=" width:100%; position:absolute; bottom:0;"> 
+
+		<form action="javascript:clientMessage();" id="inputMessage">
+			<input style="
+				margin: 10px;
+                bottom: 0; 
+                width: 90%; 
+                font-size: 17px;
+                font-family:Times New Roman, Times, serif;
+                padding:10px;" type="text" name="messageContent" value="Start typing..." >
+           	<input type="submit" value="Submit">
+
+		</form>
+	</div>
+</div>
+
+
+
+<!-- Username input                -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="UTF-8">
+    <head>
+        <title>Forget Me Not</title>
+		<link rel = "stylesheet" type = "text/css" href = "style.css">
+
+        <style>
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+          
+        }
+
+        body {
+            background: linear-gradient(to top right, #66ff66 0%, #6699ff 100%);
+            display: table;
+        }
+
+        .my-block {
+            text-align: center;
+            /*display: table-cell;*/
+            vertical-align: middle;
+            text-decoration-color: pink;
+       
+        }
+
+
+        .content {
+            height: 200px;
+            width: 400px;
+            background: ;
+            margin-top:100px;
+            margin-left: 500px ;
+        }
+
+        .text{
+        	color: pink;
+        	font-size: 80px;
+        	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        }
+
+        .text1{
+        	color: white;
+        	font-size: 20px;
+        	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+        }
+
+/*        .button {
+        	display: table-cell;
+            vertical-align: middle;
+   			background-color: #8cd3ff; /* Green */
+		   /* border-radius: 8px;
+		    border: 2px solid #ffc4f0;
+		    color: white;
+		    padding: 15px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		}*/
+
+	/*	.button:hover {
+    		background-color: #66c4ff; /* Green */
+    		/*color: white;
+    		box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+		}*/
+        </style>
+    </head>
+    <body>
+    <div class="my-block">
+       	<h1 class="text">Forget Me Not</h1>
+       	<h2 class="text1">The visual reminder system that will help you track anything!<br><br>Just input the date and time below to connect with your device.</h2>
+<!--        	<button id = "myButton"  class="button">Continue</button> -->
+       	<!-- <button id = "button">
+       		<center><input type="button" value="Continue"></center>
+   		</div> -->
+    </div>
+
+
+    <div class ="content"  >
+    <form name="log" action="insplacement.jsp" method="post">
+           Event:<input type="text" id ="event" value="" size="20" Style ="margin-left: 30px"/><br>
+           Month:<input type="text" id ="month" value="" size="20" Style ="margin-left: 25px"/><br>
+           Day:<input type="text" id="day" value="" size="20" Style ="margin-left: 41px" /><br>
+           Year:<input type="text" id="year" value="" size="20" style="margin-left: 38px" /><br>
+           Hour:<input type="text" id="hour" value="" size="20" style = "margin-left: 34.5px"/><br>
+           Minute:<input type="text" id="minute" value="" size="20" style = "margin-left: 21.5px"/><br><br> 
+         
+           <input type="submit" value="Insert" name="logButton"/>
+           <input type="reset" value="Clear" />
+
+        </form>
+        </div>
+
+
+
+    </body>
+</html>
+
+<script src = "/socket.io/socket.io.js"></script>
+<script src = "/main.js"></script>
